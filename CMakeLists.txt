@@ -1,5 +1,13 @@
-set(COMPONENT_ADD_INCLUDEDIRS .)
+set(COMPONENT_SRCS 
+  src/ssd1306.c
+  )
 
-set(COMPONENT_SRCS "ssd1306.c")
+set(COMPONENT_ADD_INCLUDEDIRS
+  include
+  )
+
+set(COMPONENT_PRIV_INCLUDEDIRS
+  src/include
+  )
 
 register_component()
