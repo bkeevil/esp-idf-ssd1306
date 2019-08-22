@@ -1,6 +1,13 @@
 menu "SSD1306 Configuration"
 
+    config USE_SSD1306_LCD_DRIVER
+        bool "Use SSD1306 LCD Driver"
+        default n
+        help
+        Select to enable inclusion of the SSD1306 LCD driver
+
     choice INTERFACE
+        depends on USE_SSD1306_LCD_DRIVER
         prompt "Interface"
         default I2C_INTERFACE
         help
@@ -53,6 +60,7 @@ if I2C_INTERFACE
 endif
 
     config RESET_GPIO
+        depends on USE_SSD1306_LCD_DRIVER
         int "RESET GPIO number"
         range -1 34
         default -1
