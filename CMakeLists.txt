@@ -7,7 +7,7 @@ set(COMPONENT_ADD_INCLUDEDIRS
   )
 
 set(COMPONENT_PRIV_INCLUDEDIRS
-  src/include
+  src
   )
 
 register_component()
